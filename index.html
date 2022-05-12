@@ -42,7 +42,7 @@
 <style type="text/css">
 
 body{
-background:#171733;
+background:#1B0303;
 color:#FFFFFF;
 font-family: 'Open Sans', sans-serif;
 font-size:16px;
@@ -106,6 +106,20 @@ font-size:1.25em;
 text-align: center !important;
 }
 
+    .hero-image {
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-name: bounce-2;
+        animation-timing-function: ease;
+-webkit-filter: drop-shadow(0 0 8px rgb(253 217 0 / 33%));
+  filter: drop-shadow(0 0 8px rgb(253 217 0 / 33%));
+    }
+    @keyframes bounce-2 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-25px); }
+        100% { transform: translateY(0); }
+    }
+    
 .hero-container .buy-button{
 color: #101024;
 background-color: #FDD900;
@@ -727,9 +741,9 @@ background-repeat: no-repeat;
 <div class="hero-container container py-5 d-flex flex-column justify-content-center align-items-center" data-aos="fade">
 <div class="row ">
 
-<div class="col-12 col-lg-12 d-flex flex-column justify-content-center align-items-center" data-aos="fade-right">
+<div class="col-12 col-lg-12 d-flex flex-column justify-content-center align-items-center" data-aos="fade">
 
-<img class="img-fluid" src="images/logo-with-text-background-3.png" style="max-width:240px;">
+<img class="img-fluid hero-image" src="images/logo-with-text-background-3.png" style="max-width:240px;">
 <h1 class="hero-title text-center mt-3">EAT THE <span style="color:#EB2121">DIP!</span></h1>
 
 <p class="hero-description mt-1" style="max-width:460px;">
@@ -1022,6 +1036,7 @@ AOS.init({
 
 });
 </script>
+
 
 
 
